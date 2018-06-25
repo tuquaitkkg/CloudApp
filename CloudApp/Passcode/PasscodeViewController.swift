@@ -25,6 +25,11 @@ class PasscodeViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.view.layoutIfNeeded()
         for button in NumberButtons {
             button.layer.cornerRadius = button.frame.size.width/2;
@@ -48,7 +53,6 @@ class PasscodeViewController: UIViewController,UITextFieldDelegate {
         if typeView == 1 {
             self.lblTitle.text = "Enter your old Passcode"
         }
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

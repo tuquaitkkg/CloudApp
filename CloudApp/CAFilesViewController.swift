@@ -32,10 +32,12 @@ class CAFilesViewController: CABaseViewController {
     let alertController = UIAlertController(title: "Log-out", message: "Are you sure ?", preferredStyle: .alert)
     
     let okAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
-      UserDefaults.standard.set(nil, forKey: "UserInformation")
-      
-      let appDelegate = UIApplication.shared.delegate as! AppDelegate
-      appDelegate.checkingAuthentication()
+        UserDefaults.standard.removeObject(forKey: "UserInformation")
+        UserDefaults.standard.set("", forKey: "UserInformation")
+        UserDefaults.standard.synchronize()
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.setupMainView()
     })
     
     let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)

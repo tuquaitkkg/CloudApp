@@ -123,18 +123,18 @@ class SettingViewController: CABaseViewController {
     @objc func btswitch(sender: UISwitch) {
         if sender.isOn {
             defaults.set(1, forKey: "switch")
-
-//            if defaults.string(forKey: "pass") == nil {
-                self.present(PasscodeViewController(), animated: true, completion: {
-                    let alertView = UIAlertController(title: "Password", message: "Please, register password", preferredStyle: .alert)
-                    let actionYes = UIAlertAction(title: "Yes", style: .default, handler: nil)
-                    alertView.addAction(actionYes)
-                    self.present(alertView, animated: true, completion: nil)
-                })
-//            }
+            
+            //            if defaults.string(forKey: "pass") == nil {
+            self.present(PasscodeViewController(), animated: true, completion: {
+                let alertView = UIAlertController(title: "Password", message: "Please, register password", preferredStyle: .alert)
+                let actionYes = UIAlertAction(title: "Yes", style: .default, handler: nil)
+                alertView.addAction(actionYes)
+                self.present(alertView, animated: true, completion: nil)
+            })
+            //            }
         }else {
             defaults.set(0, forKey: "switch")
-
+            
         }
     }
     
@@ -163,7 +163,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 3 {
             cell.lbNameSetting.text = "Suport"
         } else if indexPath.row == 4 {
-             cell.lbNameSetting.text = "Share this app"
+            cell.lbNameSetting.text = "Share this app"
         } else {
             cell.lbNameSetting.text = "Logout"
         }
@@ -186,15 +186,15 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
             passcodeVC.typeView = 1
             present(passcodeVC, animated: true, completion: nil)
         } else if indexPath.row == 5 {
-           
-            let alertView = UIAlertController(title: "Alert", message: "Do you want logout this app?", preferredStyle: .alert)
-           let actionYes  = UIAlertAction(title: "Yes", style: .default) { (action) in
-             let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CALoginViewController") as! CALoginViewController
-            UserDefaults.standard.removeObject(forKey: "UserInformation")
-            UserDefaults.standard.set(0, forKey: "switch")
-            let appdelegate = UIApplication.shared.delegate as! AppDelegate
-                 appdelegate.window!.rootViewController = loginVC
             
+            let alertView = UIAlertController(title: "Alert", message: "Do you want logout this app?", preferredStyle: .alert)
+            let actionYes  = UIAlertAction(title: "Yes", style: .default) { (action) in
+                UserDefaults.standard.removeObject(forKey: "UserInformation")
+                UserDefaults.standard.set("", forKey: "UserInformation")
+                UserDefaults.standard.synchronize()
+                
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.setupMainView()
             }
             let actionNO = UIAlertAction(title: "No", style: .default, handler: nil)
             alertView.addAction(actionYes)
@@ -229,14 +229,14 @@ extension SettingViewController: MFMessageComposeViewControllerDelegate, MFMailC
         switch result {
         case .cancelled:
             print("Mail cancelled")
-          
+            
             break
         case .saved:
             print("Mail saved")
             break
         case .sent:
             print("Mail sent")
-           
+            
             break
         case .failed:
             
