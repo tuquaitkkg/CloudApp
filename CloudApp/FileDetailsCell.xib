@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FileDetailsCell" id="gTV-IL-0wX" customClass="FileDetailsCell" customModule="CloudApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="153" height="135"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="153" height="135"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Xr-bC-ZGC">
+                        <rect key="frame" x="0.0" y="0.0" width="153" height="135"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </imageView>
+                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wUR-mA-c8l">
+                        <rect key="frame" x="0.0" y="99" width="153" height="36"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="hUn-BL-E4k"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label asd as das da sd asd" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRM-RG-KXN">
+                        <rect key="frame" x="0.0" y="99" width="153" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="5hA-MP-0Yu"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGF-bG-6rb">
+                        <rect key="frame" x="112" y="0.0" width="41" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="Tbx-oC-MLD"/>
+                            <constraint firstAttribute="width" constant="41" id="YXK-nY-As5"/>
+                        </constraints>
+                        <state key="normal" image="ic_Delete"/>
+                        <connections>
+                            <action selector="btnDeleteClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="aAv-Vj-2YZ"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="tRM-RG-KXN" secondAttribute="bottom" id="1Id-Rv-eYp"/>
+                <constraint firstAttribute="trailing" secondItem="8Xr-bC-ZGC" secondAttribute="trailing" id="2pd-Rv-NJo"/>
+                <constraint firstItem="PGF-bG-6rb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="4GM-sn-GGq"/>
+                <constraint firstAttribute="bottom" secondItem="wUR-mA-c8l" secondAttribute="bottom" id="DFp-3S-BKA"/>
+                <constraint firstItem="tRM-RG-KXN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZEJ-E3-TRA"/>
+                <constraint firstAttribute="bottom" secondItem="8Xr-bC-ZGC" secondAttribute="bottom" id="bfn-nw-igG"/>
+                <constraint firstItem="wUR-mA-c8l" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dyl-DX-N5Z"/>
+                <constraint firstAttribute="trailing" secondItem="wUR-mA-c8l" secondAttribute="trailing" id="fCb-yC-v6K"/>
+                <constraint firstItem="8Xr-bC-ZGC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gcQ-h1-hqx"/>
+                <constraint firstAttribute="trailing" secondItem="tRM-RG-KXN" secondAttribute="trailing" id="l9d-eL-Kvf"/>
+                <constraint firstItem="8Xr-bC-ZGC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rrn-AI-8gC"/>
+                <constraint firstAttribute="trailing" secondItem="PGF-bG-6rb" secondAttribute="trailing" id="tTj-D9-OvX"/>
+            </constraints>
+            <size key="customSize" width="153" height="135"/>
+            <connections>
+                <outlet property="btnDelete" destination="PGF-bG-6rb" id="84a-Yq-xe1"/>
+                <outlet property="imgContent" destination="8Xr-bC-ZGC" id="4fr-dg-RCO"/>
+                <outlet property="lbName" destination="tRM-RG-KXN" id="VKv-11-lQB"/>
+            </connections>
+            <point key="canvasLocation" x="-123" y="-14"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_Delete" width="26" height="26"/>
+    </resources>
+</document>
