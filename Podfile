@@ -12,4 +12,5 @@ target 'CloudApp' do
  pod 'NVActivityIndicatorView'
  pod 'DGElasticPullToRefresh'
  pod 'UIScrollView-InfiniteScroll'
+ pod 'BiometricAuthentication'
 end

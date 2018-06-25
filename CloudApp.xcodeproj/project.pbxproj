@@ -29,10 +29,6 @@
 		8437004920D92C9B00754941 /* EHFAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437004620D92C9B00754941 /* EHFAuthenticator.m */; };
 		8437004C20D9363800754941 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437004A20D9363800754941 /* SettingVC.swift */; };
 		8437004D20D9363800754941 /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8437004B20D9363800754941 /* SettingVC.xib */; };
-		8437005E20D937FA00754941 /* PasscodeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8437004F20D937F900754941 /* PasscodeCollectionViewCell.xib */; };
-		8437005F20D937FA00754941 /* PasscodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8437005020D937F900754941 /* PasscodeViewController.xib */; };
-		8437006020D937FA00754941 /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437005120D937F900754941 /* PasscodeViewController.swift */; };
-		8437006120D937FA00754941 /* PasscodeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437005220D937F900754941 /* PasscodeCollectionViewCell.swift */; };
 		8437006220D937FA00754941 /* PrivacyPolicyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8437005420D937F900754941 /* PrivacyPolicyViewController.xib */; };
 		8437006320D937FA00754941 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437005520D937F900754941 /* PrivacyPolicyViewController.swift */; };
 		8437006420D937FA00754941 /* TermsOfUseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8437005720D937F900754941 /* TermsOfUseViewController.xib */; };
@@ -57,6 +53,9 @@
 		84F8DB5020D253A7000D8D49 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F8DB4E20D253A7000D8D49 /* HomeCell.xib */; };
 		84F8DB5220D254C1000D8D49 /* HomeObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8DB5120D254C1000D8D49 /* HomeObject.swift */; };
 		84F8DB5420D26CD6000D8D49 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8DB5320D26CD6000D8D49 /* Extensions.swift */; };
+		903213B020E0DB37001B3529 /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903213AF20E0DB37001B3529 /* PasscodeViewController.swift */; };
+		903213B320E0DB7A001B3529 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903213B120E0DB79001B3529 /* NSObjectExtension.swift */; };
+		903213B420E0DB7A001B3529 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903213B220E0DB79001B3529 /* UIAlertControllerExtension.swift */; };
 		9D397B301E20DDD600D60212 /* other.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D397B2F1E20DDD600D60212 /* other.png */; };
 		9D397B321E211C9700D60212 /* S3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D397B311E211C9700D60212 /* S3.swift */; };
 		9D601F8C1E23D69D001BC283 /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D601F8B1E23D69D001BC283 /* logout.png */; };
@@ -133,10 +132,6 @@
 		8437004720D92C9B00754941 /* EHFAuthenticator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHFAuthenticator.h; sourceTree = "<group>"; };
 		8437004A20D9363800754941 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		8437004B20D9363800754941 /* SettingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingVC.xib; sourceTree = "<group>"; };
-		8437004F20D937F900754941 /* PasscodeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasscodeCollectionViewCell.xib; sourceTree = "<group>"; };
-		8437005020D937F900754941 /* PasscodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasscodeViewController.xib; sourceTree = "<group>"; };
-		8437005120D937F900754941 /* PasscodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
-		8437005220D937F900754941 /* PasscodeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeCollectionViewCell.swift; sourceTree = "<group>"; };
 		8437005420D937F900754941 /* PrivacyPolicyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrivacyPolicyViewController.xib; sourceTree = "<group>"; };
 		8437005520D937F900754941 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		8437005720D937F900754941 /* TermsOfUseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TermsOfUseViewController.xib; sourceTree = "<group>"; };
@@ -161,6 +156,9 @@
 		84F8DB4E20D253A7000D8D49 /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		84F8DB5120D254C1000D8D49 /* HomeObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeObject.swift; sourceTree = "<group>"; };
 		84F8DB5320D26CD6000D8D49 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		903213AF20E0DB37001B3529 /* PasscodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
+		903213B120E0DB79001B3529 /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
+		903213B220E0DB79001B3529 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		9D18B6231E239CBF0068AD9B /* CloudApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CloudApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		9D397B2F1E20DDD600D60212 /* other.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = other.png; sourceTree = "<group>"; };
 		9D397B311E211C9700D60212 /* S3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S3.swift; sourceTree = "<group>"; };
@@ -323,10 +321,9 @@
 		8437004E20D937F900754941 /* Passcode */ = {
 			isa = PBXGroup;
 			children = (
-				8437004F20D937F900754941 /* PasscodeCollectionViewCell.xib */,
-				8437005020D937F900754941 /* PasscodeViewController.xib */,
-				8437005120D937F900754941 /* PasscodeViewController.swift */,
-				8437005220D937F900754941 /* PasscodeCollectionViewCell.swift */,
+				903213B120E0DB79001B3529 /* NSObjectExtension.swift */,
+				903213B220E0DB79001B3529 /* UIAlertControllerExtension.swift */,
+				903213AF20E0DB37001B3529 /* PasscodeViewController.swift */,
 			);
 			path = Passcode;
 			sourceTree = "<group>";
@@ -526,7 +523,6 @@
 				9D945B491E1B913400FDFFDF /* Frameworks */,
 				9D945B4A1E1B913400FDFFDF /* Resources */,
 				EF26607C7E72B247B93B91DC /* [CP] Embed Pods Frameworks */,
-				15BBF5288BBE0B1621C53B52 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -602,11 +598,9 @@
 				84AD7CEA20D907DC00358E14 /* CreatDocumentVC.xib in Resources */,
 				9D730B2E1E1EB10A00D0DDBC /* audio.png in Resources */,
 				8437004D20D9363800754941 /* SettingVC.xib in Resources */,
-				8437005F20D937FA00754941 /* PasscodeViewController.xib in Resources */,
 				9D7A2EEE1E1D629100020C85 /* CAFileTableViewCell.xib in Resources */,
 				9D601F911E24B63C001BC283 /* audio-player.png in Resources */,
 				8437006920D937FA00754941 /* SettingTableViewCell.xib in Resources */,
-				8437005E20D937FA00754941 /* PasscodeCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,28 +613,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CloudApp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		15BBF5288BBE0B1621C53B52 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CloudApp/Pods-CloudApp-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EF26607C7E72B247B93B91DC /* [CP] Embed Pods Frameworks */ = {
@@ -649,9 +631,24 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CloudApp/Pods-CloudApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BiometricAuthentication/BiometricAuthentication.framework",
+				"${BUILT_PRODUCTS_DIR}/DGElasticPullToRefresh/DGElasticPullToRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/UIScrollView-InfiniteScroll/UIScrollView_InfiniteScroll.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BiometricAuthentication.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DGElasticPullToRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIScrollView_InfiniteScroll.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -665,6 +662,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				903213B420E0DB7A001B3529 /* UIAlertControllerExtension.swift in Sources */,
 				9D945B6F1E1BE3DA00FDFFDF /* CAFilesViewController.swift in Sources */,
 				8437003920D92B4A00754941 /* TOPasscodeFixedInputView.m in Sources */,
 				843FC66720D2D98000D08403 /* FilesDetailsVC.swift in Sources */,
@@ -677,9 +675,11 @@
 				8437004020D92B4A00754941 /* TOPasscodeView.m in Sources */,
 				8437003420D92B4A00754941 /* TOSettingsKeypadImage.m in Sources */,
 				84F8DB4F20D253A7000D8D49 /* HomeCell.swift in Sources */,
+				903213B020E0DB37001B3529 /* PasscodeViewController.swift in Sources */,
 				9D945B741E1CDDE400FDFFDF /* CABaseViewController.swift in Sources */,
 				8437003320D92B4A00754941 /* TOPasscodeViewControllerAnimatedTransitioning.m in Sources */,
 				8437003720D92B4A00754941 /* TOPasscodeSettingsWarningLabel.m in Sources */,
+				903213B320E0DB7A001B3529 /* NSObjectExtension.swift in Sources */,
 				8437006320D937FA00754941 /* PrivacyPolicyViewController.swift in Sources */,
 				8437003C20D92B4A00754941 /* TOPasscodeVariableInputView.m in Sources */,
 				9D945B6B1E1BA77800FDFFDF /* CloudFile.swift in Sources */,
@@ -693,7 +693,6 @@
 				9D945B501E1B913400FDFFDF /* AppDelegate.swift in Sources */,
 				8437004120D92B4A00754941 /* TOPasscodeSettingsViewController.m in Sources */,
 				8437003520D92B4A00754941 /* TOPasscodeViewContentLayout.m in Sources */,
-				8437006120D937FA00754941 /* PasscodeCollectionViewCell.swift in Sources */,
 				8437004C20D9363800754941 /* SettingVC.swift in Sources */,
 				8437004920D92C9B00754941 /* EHFAuthenticator.m in Sources */,
 				8437003620D92B4A00754941 /* TOPasscodeSettingsKeypadView.m in Sources */,
@@ -702,7 +701,6 @@
 				84AD7CE520D8ED9A00358E14 /* DetailsVC.swift in Sources */,
 				8437003820D92B4A00754941 /* TOPasscodeSettingsKeypadButton.m in Sources */,
 				8437003D20D92B4A00754941 /* TOPasscodeInputField.m in Sources */,
-				8437006020D937FA00754941 /* PasscodeViewController.swift in Sources */,
 				8437003F20D92B4A00754941 /* TOPasscodeKeypadView.m in Sources */,
 				84F8DB5220D254C1000D8D49 /* HomeObject.swift in Sources */,
 				84E9483720D11B9F006D7B29 /* HomeVC.swift in Sources */,

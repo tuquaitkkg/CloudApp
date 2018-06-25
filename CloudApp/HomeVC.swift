@@ -61,17 +61,17 @@ class HomeVC: CABaseViewController {
         let settingBarButton =  UIBarButtonItem(image: imageSetting, style: .plain, target: self, action: #selector(settingActionSheet(sender:)))
         navigationItem.leftBarButtonItem = settingBarButton
 //         defaults.set(1, forKey: "switch")
-        let swit = UserDefaults.standard.integer(forKey: "switch")
-        if swit == 1{
-            let controller = PasscodeViewController()
-            controller.isMain = true
-            self.present(controller, animated: true, completion: {
-                let alertView = UIAlertController(title: "Password", message: "Please, register password", preferredStyle: .alert)
-                let actionYes = UIAlertAction(title: "Yes", style: .default, handler: nil)
-                alertView.addAction(actionYes)
-                self.present(alertView, animated: true, completion: nil)
-            })
-        }
+//        let swit = UserDefaults.standard.integer(forKey: "switch")
+//        if swit == 1{
+//            let controller = PasscodeViewController()
+//            controller.isMain = true
+//            self.present(controller, animated: true, completion: {
+//                let alertView = UIAlertController(title: "Password", message: "Please, register password", preferredStyle: .alert)
+//                let actionYes = UIAlertAction(title: "Yes", style: .default, handler: nil)
+//                alertView.addAction(actionYes)
+//                self.present(alertView, animated: true, completion: nil)
+//            })
+//        }
         
         
     }

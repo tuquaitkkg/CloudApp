@@ -32,27 +32,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    public func checkingAuthentication() {
-        
+    func setupMainView() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
         if let _ = UserDefaults.standard.dictionary(forKey: "UserInformation") {
-            
-                let home = HomeVC(nibName: "HomeVC", bundle: nil)
-                home.title = "HOME"
-                let filesNav = UINavigationController(rootViewController: home)
-                window?.rootViewController = filesNav
-            
-            
-            
+            let home = HomeVC(nibName: "HomeVC", bundle: nil)
+            home.title = "HOME"
+            let filesNav = UINavigationController(rootViewController: home)
+            window?.rootViewController = filesNav
         }else{
-            
             let loginVC = storyboard.instantiateViewController(withIdentifier: "CALoginViewController") as! CALoginViewController
-            
             window?.rootViewController = loginVC
-            
         }
-        
+        window?.makeKeyAndVisible()
+    }
+    
+    public func checkingAuthentication() {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let passcodeVC = storyboard.instantiateViewController(withIdentifier: "PasscodeViewController") as? PasscodeViewController
+        passcodeVC?.typeView = 0
+        self.window?.rootViewController = passcodeVC
     }
     
 }

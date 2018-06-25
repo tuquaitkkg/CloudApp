@@ -155,8 +155,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! SettingTableViewCell
         if indexPath.row == 0 {
-            cell.switchPasscode.isHidden = false
-            cell.lbNameSetting.text = "Passcode"
+            cell.lbNameSetting.text = "Change Passcode"
         } else if indexPath.row == 1 {
             cell.lbNameSetting.text = "Privacy Policy"
         } else if indexPath.row == 2  {
@@ -182,7 +181,10 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 3 {
             self.shareMail()
         } else if indexPath.row == 0 {
-            
+            let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+            let passcodeVC = storyboard.instantiateViewController(withIdentifier: "PasscodeViewController") as! PasscodeViewController
+            passcodeVC.typeView = 1
+            present(passcodeVC, animated: true, completion: nil)
         } else if indexPath.row == 5 {
            
             let alertView = UIAlertController(title: "Alert", message: "Do you want logout this app?", preferredStyle: .alert)

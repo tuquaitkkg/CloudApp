@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.2.0)
+  - BiometricAuthentication (1.0.5)
   - DGElasticPullToRefresh (1.1)
   - IQKeyboardManagerSwift (4.0.7)
   - NVActivityIndicatorView (3.1)
@@ -8,20 +9,32 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - BiometricAuthentication
   - DGElasticPullToRefresh
   - IQKeyboardManagerSwift
   - NVActivityIndicatorView
   - SwiftyJSON
   - UIScrollView-InfiniteScroll
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - BiometricAuthentication
+    - DGElasticPullToRefresh
+    - IQKeyboardManagerSwift
+    - NVActivityIndicatorView
+    - SwiftyJSON
+    - UIScrollView-InfiniteScroll
+
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  BiometricAuthentication: e80e99bf1fe871ab624172eb91f1ddbbc47499b5
   DGElasticPullToRefresh: 28f11a6026302a90f8ffebbc6e24748e584dddd3
   IQKeyboardManagerSwift: 58bbcf46b5cf9fd4ed625d28a60cb2fbae4ab0f4
   NVActivityIndicatorView: 9f47e8a4affb860ef729aeec99b1550219e6c233
   SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
   UIScrollView-InfiniteScroll: 14e204c50ca4040467e1cbfa141dad7a18919b56
 
-PODFILE CHECKSUM: b0e678dc463eda28a48e8f13c1eb4d80201fe2ef
+PODFILE CHECKSUM: 8d30d5a837334c5f375312f0c05889af74e4c9e8
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.5.2
