@@ -159,6 +159,7 @@ class HomeVC: CABaseViewController {
             
             let controller = CreatDocumentVC(nibName: "CreatDocumentVC", bundle: nil)
             controller.doSave = { content in
+                self.startIndicator(message: "Upload item...")
                 let dataForUpload = content.data(using: .utf8)
                 
                 self.prepareForUploadItem(fileName: "Text \(self.dateString()).txt", dataUpload: dataForUpload!, mimeType: "text/*")
@@ -192,7 +193,7 @@ class HomeVC: CABaseViewController {
     func prepareForUploadItem(fileName : String, dataUpload : Data, mimeType : String) {
         
         let parameter = ["name" : fileName,
-                         "file_size" : 2000000] as [String : Any]
+                         "file_size" : 20000000] as [String : Any]
         
         
         Router.shared.uploadItem(parameter: parameter, success: { (result) in
@@ -204,6 +205,7 @@ class HomeVC: CABaseViewController {
             self.uploadFileToS3(s3, data: dataUpload, fileName: fileName, mimeType: mimeType)
             
         }) { (statusCode) in
+            self.stopAnimating()
             if statusCode != nil{
                 self.normalAlert(title: "Error", message: self.ErrorsDescription(result: statusCode as! Int), completionHandle: nil)
             }else{
@@ -247,7 +249,9 @@ class HomeVC: CABaseViewController {
                 upload.responseJSON{ response in
                     
                     self.progressbar.isHidden = true
-                    
+                    if response.result.error != nil {
+                        return
+                    }
                     let result = JSON(response.result.value!)
                     let file = CloudFile(fileInformation: result)
                     
@@ -278,11 +282,13 @@ class HomeVC: CABaseViewController {
                         self.viewMusic.lbContent.text = String.init(format: "%d file", self.listMusic.count)
                         self.viewFile.lbContent.text = String.init(format: "%d file", self.listFile.count)
                         self.viewDoc.lbContent.text = String.init(format: "%d file", self.listDocument.count)
+                        self.stopAnimating()
                     }
                     
                 }
             case .failure(let encodingError):
                 print(encodingError)
+                self.stopAnimating()
             }
         }
         
@@ -422,7 +428,7 @@ extension HomeVC : UIImagePickerControllerDelegate, UINavigationControllerDelega
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         //2
-        
+        startIndicator(message: "Upload item...")
         let mediaType = info[UIImagePickerControllerMediaType] as! String
         
         if mediaType == (kUTTypeMovie as String){
@@ -430,10 +436,10 @@ extension HomeVC : UIImagePickerControllerDelegate, UINavigationControllerDelega
             
             let videoName = "Video \(dateString()).mp4"
             
-            let videoData = NSData(contentsOf: videoUrl) as! Data
+            let videoData = NSData(contentsOf: videoUrl)! as Data
             
-            if videoData.count > 2000000 {
-                
+            if videoData.count > 20000000 {
+
                 dismiss(animated:true, completion: { _ in
                     self.normalAlert(title: "Warning", message: "This file too lager", completionHandle: nil)
                 })
