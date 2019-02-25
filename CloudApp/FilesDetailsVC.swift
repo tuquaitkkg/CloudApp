@@ -67,7 +67,7 @@ class FilesDetailsVC: CABaseViewController {
     }
     
     func initLayout() -> Void {
-        self.title = titleNavi
+        setTitle(text: titleNavi)
         self.clvContent.delegate = self
         self.clvContent.dataSource = self
         self.clvContent.register(UINib(nibName: "FileDetailsCell", bundle: nil), forCellWithReuseIdentifier: "FileDetailsCell")

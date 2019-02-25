@@ -137,5 +137,13 @@ extension CABaseViewController : ChartboostDelegate,GADBannerViewDelegate{
   func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
     print(error)
   }
+    
+    func setTitle(text : String) {
+        let label = UILabel.init(frame: CGRect(x: 0, y: 0, width: 200, height: 44))
+        label.text = text
+        label.textAlignment = .center
+        label.textColor = UIColor.white
+        self.navigationItem.titleView = label
+    }
   
 }
